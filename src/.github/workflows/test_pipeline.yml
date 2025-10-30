@@ -1,0 +1,17 @@
+name: Test
+
+on:
+  push:
+    branches: [ "master", "features/add_github_action" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+    - uses: actions/checkout@v4
